@@ -10,7 +10,7 @@ export const Reward=()=>{
                 </div>
             </div>
             <div>
-                <button className="rewar-btn">Click to view {">"}</button>
+                <button className="reward-btn">Click to view {">"}</button>
             </div>
         </div>
     )
