@@ -2,6 +2,7 @@ import {useLocation} from "react-router-dom"
 import {useEffect,useState} from "react"
 import axios from "axios"
 import "../single.styles.css"
+import "../styles.css"
 import { BackdropExample } from "./Modal"
 export const Single=()=>{
     const [item,setItem] = useState({})  

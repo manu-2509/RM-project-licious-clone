@@ -36,7 +36,7 @@ return (
             return(
                 <div className="chick-box" key={e._id}>
                      <img className="chick-img" onClick={()=>handleClick(e._id)} src={e.img1} alt=""/>
-                      <h3 onClick={()=>handleClick(e._id)} className="chick-head">{e.item}</h3>
+                      <h3 onClick={()=>handleClick(e._id)} className="chick-head extra-head">{e.item}</h3>
                       <p className="chick-head extra-chick">Lorem ipsum dolor sit amet, consectetur</p>
                        <div className="chick-wt" onClick={()=>handleClick(e._id)}>
                         <h4>Net wt:{e.Netwt}gms</h4>

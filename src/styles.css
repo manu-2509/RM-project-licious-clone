@@ -378,6 +378,12 @@ margin-left:182px;
     font-weight:bold;
     padding:0px 10px 0px 10px; 
 }
+.extra-head{
+    width: 350px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; 
+}
 .extra-chick{
     color: rgba(128, 128, 128, 0.696);
 }
@@ -529,6 +535,7 @@ at their correct positions. */
 .item-main{
     width:50%;
     border-radius: 8px;
+    overflow-y: scroll;
 }
 .item-img{
     width:20px;
