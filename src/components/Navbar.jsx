@@ -13,7 +13,7 @@ export const Navbar=()=>{
     const { isOpen:isLoginOpen, onOpen:onLoginOpen, onClose:onLoginClose } = useDisclosure()
     const { isOpen:isCartOpen, onOpen:onCartOpen, onClose:onCartClose } = useDisclosure()
     const btnRef = useRef()
-    const {cart} =useContext(CartContext)
+    const {cart,setCart} =useContext(CartContext)
     const [count,setCount] = useState(1)
     const [log,setLog] = useState("")
     const [dis,setDis] = useState(false)
@@ -107,7 +107,8 @@ export const Navbar=()=>{
         }
     }
     const handleRemove=(id)=>{
-       {cart.filter((item)=>item._id!=id)}
+        let update=cart.filter((item)=>item._id!=id)
+       setCart(update)
     }
     return (
         <div>

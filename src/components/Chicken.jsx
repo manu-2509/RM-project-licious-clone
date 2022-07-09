@@ -21,9 +21,13 @@ export const Chicken=()=>{
         navigate(`/chicken/${id}`)
     }
     const addToCart=(id)=>{
-        console.log(data)
+        let exist=cart.filter((item)=>item._id==id)
+        if(exist.length!==0){
+            alert("Item is already in cart")
+        }else{
         const add=data.find((item)=>item._id===id)
         setCart([...cart,add])
+        }
     }
 
 return (
