@@ -106,6 +106,9 @@ export const Navbar=()=>{
             navigate("/checkout")
         }
     }
+    const handleRemove=(id)=>{
+       {cart.filter((item)=>item._id!=id)}
+    }
     return (
         <div>
             <div className="navbar-0">
@@ -208,7 +211,7 @@ export const Navbar=()=>{
                    <p className='cart-p1'>{index+1}</p>
                    <p className="cart-p2">{item.item}</p>  
                     </Box>
-                    <VscClose></VscClose>
+                    <VscClose onClick={()=>handleRemove(item._id)}></VscClose>
                 </Box>
                 <Box className='cart-box2'>
                     <Box className='cart-box11'>
