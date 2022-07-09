@@ -2,6 +2,7 @@ import {AiFillApple} from "react-icons/ai"
 import {BsDot} from "react-icons/bs"
 import {IoIosArrowDown} from "react-icons/io"
 import {AiOutlineSearch} from "react-icons/ai"
+import {VscClose} from "react-icons/vsc"
 import {CartContext} from "../context/cartcontext"
 import {useContext,useRef,useState} from "react"
 import { useNavigate } from "react-router-dom"
@@ -205,7 +206,7 @@ export const Navbar=()=>{
                 <Box className='cart-box'>
                     <p className='cart-p1'>{index+1}</p>
                    <p className="cart-p2">{item.item}</p> 
-
+                    <VscClose></VscClose>
                 </Box>
                 <Box className='cart-box2'>
                     <Box className='cart-box11'>

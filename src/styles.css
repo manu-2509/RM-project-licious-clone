@@ -653,6 +653,7 @@ body{
 }
 .cart-box{
     display:flex;
+    justify-content:space-between
 }
 .cart-p1{
     background-color: rgb(220, 237, 244);
