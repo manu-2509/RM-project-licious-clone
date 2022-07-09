@@ -107,7 +107,7 @@ export const Navbar=()=>{
         }
     }
     const handleRemove=(id)=>{
-        let update=cart.filter((item)=>item._id!=id)
+        let update=cart.filter((item)=>item._id!==id)
        setCart(update)
     }
     return (
@@ -282,10 +282,10 @@ export const Navbar=()=>{
                     <img className="top-img" src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/c777a59e-f2f7-dd37-9ba0-7f385aed3eb3/original/Circle@3x.png?format=webp" alt="Chicken" />
                     <p>Chicken</p>
                 </Link>
-                <div>
+                <Link to="/fish">
                     <img className="top-img extra-21" src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/e13f894d-d51e-beea-4ef5-aab1a193d373/original/Circle@3x-13.png?format=webp" alt="Fish" />
                     <p>Fish & Seafood</p>
-                </div>
+                </Link>
                 <div>
                     <img className="top-img" src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/4d9c0c72-c070-dd56-4a2e-9fbfe8230f42/original/Circle@3x-1.png?format=webp" alt="Mutton" />
                     <p>Mutton</p>

@@ -4,21 +4,21 @@ import axios from "axios"
 import { CartContext } from "../context/cartcontext"
 import {useContext} from "react"
 import "../styles.css"
-export const Chicken=()=>{
-    const navigate=useNavigate()
+export const Fish=()=>{
+              const navigate=useNavigate()
     const [data,setData] = useState([])
     const {cart,setCart}  = useContext(CartContext)
     useEffect(()=>{
-        axios.get("https://licious-0.herokuapp.com/chicken")
+        axios.get("https://licious-0.herokuapp.com/fish")
         .then((response)=>{
-          setData(response.data.chicken)
+          setData(response.data.fish)
         })
         .catch((error)=>{
             console.log(error);
         })
     },[])
     const  handleClick=(id)=>{
-        navigate(`/chicken/${id}`)
+        navigate(`/fish/${id}`)
     }
     const addToCart=(id)=>{
         let exist=cart.filter((item)=>item._id===id)
@@ -56,5 +56,5 @@ return (
         })}
 
      </div>
-)
-} 
+    )
+}

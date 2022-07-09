@@ -7,6 +7,7 @@ import { Chicken } from './components/Chicken';
 import { Single } from './components/Single';
 import {Checkout} from './components/Checkout'
 import {Payment} from './components/Payment'
+import {Fish} from './components/Fish'
 function App() {
   return (
     <div className="App">
@@ -15,6 +16,8 @@ function App() {
       <Route path="/" element={<Home/>}></Route>
       <Route path="/chicken" element={<Chicken/>}></Route>
       <Route path="/chicken/:id" element={<Single/>}></Route>
+      <Route path="/fish" element={<Fish/>}></Route>
+      <Route path="/fish/:id" element={<Single/>}></Route>
       <Route path="/checkout" element={<Checkout/>}></Route>
       <Route path="/payment" element={<Payment/>}></Route>
      </Routes>

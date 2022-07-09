@@ -1,16 +1,18 @@
-import {useParams} from "react-router-dom"
+import {useLocation} from "react-router-dom"
 import {useEffect,useState} from "react"
 import axios from "axios"
 import "../single.styles.css"
 import { BackdropExample } from "./Modal"
 export const Single=()=>{
     const [item,setItem] = useState({})  
-    const {id}=useParams()
+    const {pathname} = useLocation();
+    let route=pathname.substring(pathname.indexOf("/")+1,pathname.lastIndexOf("/"))
     useEffect(()=>{
-       axios.get(`https://licious-0.herokuapp.com/chicken/${id}`).then((response)=>{
-        setItem(response.data.chicken)
+       axios.get(`https://licious-0.herokuapp.com${pathname}`).then((response)=>{
+        setItem(response.data[`${route}`])
        })
-    },[id])
+    },[pathname])
+    console.log(item)
     return(
         <div>
 <div className="main-main">
