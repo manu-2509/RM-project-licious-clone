@@ -204,8 +204,10 @@ export const Navbar=()=>{
                 return(
             <Stack className='cart-item' key={item._id}>
                 <Box className='cart-box'>
-                    <p className='cart-p1'>{index+1}</p>
-                   <p className="cart-p2">{item.item}</p> 
+                    <Box className='cart-boxx1'>
+                   <p className='cart-p1'>{index+1}</p>
+                   <p className="cart-p2">{item.item}</p>  
+                    </Box>
                     <VscClose></VscClose>
                 </Box>
                 <Box className='cart-box2'>

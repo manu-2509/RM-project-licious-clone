@@ -655,6 +655,9 @@ body{
     display:flex;
     justify-content:space-between
 }
+.cart-boxx1{
+    display:flex;
+}
 .cart-p1{
     background-color: rgb(220, 237, 244);
     padding-left:3px;
@@ -668,7 +671,6 @@ body{
 }
 .cart-box2{
     display:flex;
-    justify-content: space-between;
 }
 .cart-p3{
     border:1px solid black;
