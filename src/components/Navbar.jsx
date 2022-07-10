@@ -286,14 +286,14 @@ export const Navbar=()=>{
                     <img className="top-img extra-21" src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/e13f894d-d51e-beea-4ef5-aab1a193d373/original/Circle@3x-13.png?format=webp" alt="Fish" />
                     <p>Fish & Seafood</p>
                 </Link>
-                <div>
+                <Link to="/mutton">
                     <img className="top-img" src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/4d9c0c72-c070-dd56-4a2e-9fbfe8230f42/original/Circle@3x-1.png?format=webp" alt="Mutton" />
                     <p>Mutton</p>
-                </div>
-                <div>
+                </Link>
+                <Link to="/readytocook">
                     <img className="top-img extra-21" src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/450e3217-59ac-8145-3bee-296e729f03bf/original/Circle@3x-17.png?format=webp" alt="ReadytoCook" />
                     <p>Ready to Cook</p>
-                </div>
+                </Link>
                 <div>
                     <img className="top-img" src="https://dao54xqhg9jfa.cloudfront.net/OMS-Category/f7ef9035-9baa-b9b5-d56d-97059ffe6c39/original/Circle@3x-18.png?format=webp" alt="Prawns" />
                     <p>Prawns</p>
