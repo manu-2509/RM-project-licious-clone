@@ -13,7 +13,7 @@ export const Footer=()=>{
                 <div className="f-first">
                <div className="f-inner">
                 <div>
-                    <h3 className="footer-h1">USEFUL LINKS</h3>
+                    <h3 className="footer-h1">USEFUL LIKS</h3>
                     <p className="footer-p">Why Licious</p>
                     <p className="footer-p">Refer & Earn</p>
                     <p className="footer-p">Licious Cash & Cash+</p>
