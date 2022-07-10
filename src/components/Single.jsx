@@ -1,11 +1,13 @@
 import {useLocation} from "react-router-dom"
-import {useEffect,useState} from "react"
+import {useEffect,useState,useContext} from "react"
 import axios from "axios"
 import "../single.styles.css"
 import "../styles.css"
+import {CartContext} from "../context/cartcontext";
 import { BackdropExample } from "./Modal"
 export const Single=()=>{
     const [item,setItem] = useState({})  
+    const {cart,setCart}  = useContext(CartContext)
     const {pathname} = useLocation();
     let route=pathname.substring(pathname.indexOf("/")+1,pathname.lastIndexOf("/"))
     useEffect(()=>{
@@ -13,7 +15,17 @@ export const Single=()=>{
         setItem(response.data[`${route}`])
        })
     },[pathname])
-    console.log(item)
+    console.log(route)
+
+    const addToCart=(id)=>{
+        let exist=cart.filter((item)=>item._id===id)
+        if(exist.length!==0){
+            alert("Item is already in cart")
+        }else{
+        setCart([...cart,item])
+        }
+    }
+
     return(
         <div>
 <div className="main-main">
@@ -73,10 +85,10 @@ export const Single=()=>{
         </div>
         <div className="item-flexdiv">
             <span className="item-span"><h3>MRP:</h3><h2>₹{item.price}</h2></span>
-            <button className="item-button"> <img className="item-bell" src="https://www.licious.in/img/rebranding/alarm.svg" alt="" /> Notify me</button>
+            <button className="item-button" onClick={()=>addToCart(item._id)}>Add to cart</button>
         </div>
-        <div className="item-wrapper">    
-            <BackdropExample></BackdropExample>  
+        <div className="item-wrapper">  
+            <BackdropExample route={route}></BackdropExample>  
         </div>
     </div>
      </div>
