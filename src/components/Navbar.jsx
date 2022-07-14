@@ -43,7 +43,7 @@ export const Navbar=()=>{
         alert(x)
         setDis(true)
     }
-    const handleOt]p=()=>{
+    const handleOtp=()=>{
         console.log(otp,con)
         if(otp===Number(con)){
             toast({
