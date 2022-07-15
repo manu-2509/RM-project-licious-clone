@@ -5,6 +5,7 @@ import "../single.styles.css"
 import "../styles.css"
 import {CartContext} from "../context/cartcontext";
 import { BackdropExample } from "./Modal"
+import {useToast} from "@chakra-ui/react"
 export const Single=()=>{
     const [item,setItem] = useState({})  
     const {cart,setCart}  = useContext(CartContext)
@@ -15,12 +16,18 @@ export const Single=()=>{
         setItem(response.data[`${route}`])
        })
     },[pathname])
-    console.log(route)
+   const toast = useToast()
 
     const addToCart=(id)=>{
         let exist=cart.filter((item)=>item._id===id)
         if(exist.length!==0){
-            alert("Item is already in cart")
+            toast({
+                title: route,
+                description: `${exist[0]["item"]} is already added to cart`,
+                status: 'info',
+                duration: 6000,
+                isClosable: true,
+              })  
         }else{
         setCart([...cart,item])
         }

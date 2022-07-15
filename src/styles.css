@@ -31,6 +31,8 @@ padding-bottom: 19px;
 }
 .container{
     display: flex;
+    padding-top:15px;
+    padding-bottom:15px;
     justify-content:space-around;
     width:70%;
     margin:auto;
@@ -38,6 +40,14 @@ padding-bottom: 19px;
 .main-cont{
     padding:10px;
     box-shadow: rgb(204, 219, 232) 0px -2px 6px 0px inset, rgba(255, 255, 255, 0.5) 0px 0px 0px 0px inset;
+}
+#freshest{
+  color:rgba(128, 128, 128, 0.658);
+  font-size:14px;
+}
+#shop-cat{
+    font-size:22px;
+    font-weight:bold; 
 }
 .nav-inp{
     height:40px;
@@ -85,17 +95,38 @@ padding-bottom: 19px;
 }
 .top-bar{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     width:75%;
     justify-content:space-between;
     margin:auto;
     font-size:14px;
     margin-top:5px;
     background-color:white;
+    text-align: center;
+    padding-left:20px;
+    background-color:whitesmoke
+}
+.cat-category{
+    width:75%;
+    text-align:left;
+    margin:auto;
+    padding-left:20px;
+}
+.category-main{
+    margin-top:20px;
+    margin-bottom:20px;
 }
 .top-img{
-    width:70px;
-    height:70px;
+    width:260px;
+    height:200px;
+    border-radius: 20px;
+}
+.top-para{
+    font-weight: 500;
+    width:95%;
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size: 17px;
 }
 .pad{
     margin-left:20px
@@ -987,4 +1018,43 @@ color:rgb(211, 77, 20)
 }
 .f-2020{
     font-weight:400
+}
+#fish-flex1{
+    display: flex;
+}
+#fish-flex2{
+    display: flex;
+}
+.fish-img{
+width:40px;
+height:40px;
+}
+#fish-flex0{
+    display: flex;
+    width:650px;
+    justify-content:space-between;
+    margin-left: 182px;
+}
+#fish-flex4{
+    display: flex;
+    width:580px;
+    justify-content:space-between;
+}
+#fish-head{
+    font-size:22px;
+    font-weight:bold;
+    padding-top: 5px;
+}
+#fish-fish1,#fish-fish2,#fish-fish3{
+    padding-top:10px;
+    color:rgba(128, 128, 128, 0.77);
+    font-size: 15px;
+}
+.icon-crumb{
+    padding-top:3px;
+    font-size:20px;
+}
+.breadcrumb{
+    width:150px;
+    margin-left:155px;
 }

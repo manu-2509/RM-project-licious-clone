@@ -1,13 +1,16 @@
 import {useState,useEffect} from "react"
-import {useNavigate} from 'react-router-dom'
+import {useNavigate,useLocation} from 'react-router-dom'
 import axios from "axios"
 import { CartContext } from "../context/cartcontext"
 import {useContext} from "react"
 import "../styles.css"
+import {IoMdArrowDropright} from "react-icons/io"
+import { Breadcrumb,BreadcrumbItem,BreadcrumbLink} from "@chakra-ui/react"
 export const Fish=()=>{
-              const navigate=useNavigate()
+    const navigate=useNavigate()
     const [data,setData] = useState([])
     const {cart,setCart}  = useContext(CartContext)
+    const {pathname}=useLocation()
     useEffect(()=>{
         axios.get("https://licious-0.herokuapp.com/fish")
         .then((response)=>{
@@ -31,6 +34,31 @@ export const Fish=()=>{
     }
 
 return (
+    <div>
+ <div className="breadcrumb">
+  <Breadcrumb  spacing='1px' separator={<IoMdArrowDropright className="icon-crumb"/>}>
+  <BreadcrumbItem>
+    <BreadcrumbLink href='#'>Home</BreadcrumbLink>
+  </BreadcrumbItem>
+  <BreadcrumbItem>
+    <BreadcrumbLink color="red" href='#'>{pathname.substring(1)}</BreadcrumbLink>
+  </BreadcrumbItem>
+  </Breadcrumb>
+  </div>
+        <div id="fish-flex0">
+            <h2 id="fish-head">Fish</h2>
+            <div id="fish-flex4">
+            <div id="fish-flex1">
+                    <img className="fish-img"src="https://d2407na1z3fc0t.cloudfront.net/USP/usp_58e78b9c4b2e0" alt="" />
+                    <p id="fish-fish1">Farm-raised superior breed</p>
+                </div>
+                <div id="fish-fish3">{"|"}</div>
+                <div id="fish-flex2">
+                    <img className="fish-img"src="https://d2407na1z3fc0t.cloudfront.net/USP/usp_58e78bdf673b7" alt="" />
+                    <p id="fish-fish2">No Added Chemical , Antibiotic residue free</p>
+                </div>
+            </div>
+        </div>
      <div className="chick-div">
         {data.map((e)=>{
             return(
@@ -55,6 +83,7 @@ return (
             )
         })}
 
+     </div>
      </div>
     )
 }
