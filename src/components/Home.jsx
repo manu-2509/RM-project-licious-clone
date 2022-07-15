@@ -1,4 +1,5 @@
 import {Banner} from './Banner'
+import {Category} from './Category'
 import {Join} from './Join'
 import {Discover} from './Discover'
 import {Cashback} from './Cashback'
@@ -11,6 +12,7 @@ export const Home=()=>{
     return(
         <div>
      <Banner></Banner>
+     <Category></Category>
      <Join></Join>
      <Discover></Discover>
      <Cashback></Cashback>
