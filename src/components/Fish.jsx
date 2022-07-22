@@ -49,13 +49,18 @@ return (
             <h2 id="fish-head">Fish</h2>
             <div id="fish-flex4">
             <div id="fish-flex1">
-                    <img className="fish-img"src="https://d2407na1z3fc0t.cloudfront.net/USP/usp_58e78b9c4b2e0" alt="" />
-                    <p id="fish-fish1">Farm-raised superior breed</p>
+                    <img className="fish-img"src="https://d2407na1z3fc0t.cloudfront.net/USP/usp_58e78e2de68f7" alt="" />
+                    <p id="fish-fish1">Select day's catch</p>
                 </div>
                 <div id="fish-fish3">{"|"}</div>
                 <div id="fish-flex2">
-                    <img className="fish-img"src="https://d2407na1z3fc0t.cloudfront.net/USP/usp_58e78bdf673b7" alt="" />
-                    <p id="fish-fish2">No Added Chemical , Antibiotic residue free</p>
+                    <img className="fish-img"src="https://d2407na1z3fc0t.cloudfront.net/USP/usp_58e78fe6974da" alt="" />
+                    <p id="fish-fish2">Chilled and never frozen</p>
+                </div>
+                <div id="fish-fish5">{"|"}</div>
+                <div id="fish-flex3">
+                    <img className="fish-img"src="https://d2407na1z3fc0t.cloudfront.net/USP/usp_58e7903958ce8" alt="" />
+                    <p id="fish-fish5">Fresh off coasts & farms</p>
                 </div>
             </div>
         </div>

@@ -1022,7 +1022,7 @@ color:rgb(211, 77, 20)
 #fish-flex1{
     display: flex;
 }
-#fish-flex2{
+#fish-flex2,#fish-flex3{
     display: flex;
 }
 .fish-img{
@@ -1035,7 +1035,7 @@ height:40px;
     justify-content:space-between;
     margin-left: 182px;
 }
-#fish-flex4{
+#fish-flex4,#fish-flex5{
     display: flex;
     width:580px;
     justify-content:space-between;
@@ -1045,7 +1045,7 @@ height:40px;
     font-weight:bold;
     padding-top: 5px;
 }
-#fish-fish1,#fish-fish2,#fish-fish3{
+#fish-fish1,#fish-fish2,#fish-fish3,#fish-fish5{
     padding-top:10px;
     color:rgba(128, 128, 128, 0.77);
     font-size: 15px;
